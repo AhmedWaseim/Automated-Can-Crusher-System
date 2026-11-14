@@ -1,101 +1,77 @@
-# Automated Can Crusher | SolidWorks & Electropneumatic Automation
+# Automated Can Crusher — Mechanical Design & Electropneumatic Control
 
-**Individual Mechatronics Engineering Project | German International University | 2025**
+**Individual academic project | Mechatronics Lab (MCTR704) | German International University, Berlin | 2025**
 
-## Project Overview
+## Overview
 
-This project focuses on the mechanical design and electropneumatic control of an automated can-crushing machine.
+This project documents the design of an automated can crusher, combining a **SolidWorks mechanical assembly**, **sequential pneumatic actuation**, **sensor-based control**, and **electrical control schematics**. The design includes a transparent enclosure and a removable collection container for crushed cans.
 
-The system was designed in SolidWorks and uses three pneumatic cylinders to perform a sequential crushing operation. Capacitive proximity sensors provide position and object-detection signals for the control system.
+> **Project status:** The available evidence documents the design, circuit diagrams, and simulation screenshots. The original editable SolidWorks and FluidSIM project files are not currently included. Physical construction and hardware testing have not been verified by the available documentation.
 
-The project combines mechanical design, pneumatic actuation, sensor integration, electrical control circuits, and manufacturing considerations.
+## 1. Mechanical Design — SolidWorks
 
-## Final SolidWorks Assembly
+![SolidWorks final assembly](images/solidworks-assembly.png)
 
-![Can Crusher Assembly](image%20whole%20assembly.jpg)
+*Original SolidWorks assembly image extracted from the project report.*
 
-*SolidWorks assembly showing the machine enclosure, pneumatic mechanisms, and removable collection compartment.*
+![SolidWorks exploded view](images/solidworks-exploded-view.png)
 
-## System Architecture
+*Exploded assembly view showing major mechanical sections.*
 
-The proposed system consists of:
+The proposed machine includes a supporting base and frame, transparent enclosure panels, can input magazine, crushing components, and a removable collection box. The design also considers manufacturing and assembly issues, including component accessibility, modular subassemblies, fastener standardization, and casting-related considerations.
 
-- **Three pneumatic cylinders:** Two provide linear motion, while the third drives a mechanism converting linear motion into rotational motion.
-- **Seven capacitive proximity sensors:** Six detect cylinder extension and retraction positions, and one detects the presence of a can.
-- **Can magazine:** Guides the workpiece into the mechanism.
-- **Crushing mechanism:** Uses coordinated pneumatic actuation.
-- **Enclosed frame:** Supports the mechanical components and transparent protective panels.
-- **Collection compartment:** Provides a removable container for processed cans.
-- **Electrical control system:** Coordinates the actuation sequence using sensor feedback and electropneumatic control circuits.
+## 2. Pneumatic Automation — Festo FluidSIM
 
-## Pneumatic Control Sequence
+![FluidSIM electropneumatic simulation](images/fluidsim-simulation.png)
 
-The designed actuation sequence is:
+*Original electropneumatic simulation screenshot from the project report.*
 
-**A+ → B+ → C+ → A− → B− → C−**
+The design uses **three pneumatic cylinders**. Two provide linear motion, while one is coupled to a mechanism that converts linear displacement into rotation. The report specifies **seven capacitive proximity sensors**: six for cylinder end-position detection and one for can detection.
 
-Here:
+### Actuation sequence
 
-- `A+`, `B+`, and `C+` represent cylinder extension.
-- `A−`, `B−`, and `C−` represent cylinder retraction.
+`A+ → B+ → C+ → A− → B− → C−`
 
-The sequence is documented using a pneumatic step diagram and electropneumatic circuit schematics.
+`+` indicates extension and `−` indicates retraction. The project report includes a pneumatic step diagram and electropneumatic circuit views.
 
-## Engineering Work
+## 3. Electrical Control & PLC-Related Design
 
-### Mechanical Design
-- Developed the machine's 3D mechanical assembly using SolidWorks.
-- Designed the structural frame, cylinder arrangement, can magazine, and collection compartment.
-- Documented mechanical components and assembly drawings.
+![Electrical control schematic](images/electrical-control-schematic.png)
 
-### Pneumatic Automation
-- Developed a sequential actuation concept using three pneumatic cylinders.
-- Integrated sensor positions into the control design.
-- Documented the electropneumatic circuit and its operating sequence.
+*Electrical control schematic from the original report; this is **not** presented as a TIA Portal screenshot.*
 
-### Electrical Control
-- Prepared electrical circuit and wiring diagrams.
-- Documented sensor and actuator connections.
-- Included control-panel and electrical layout drawings.
+![Electrical panel layout](images/electrical-panel-layout.jpg)
 
-### Manufacturing and Assembly
-- Considered Design for Manufacturing (DFM) and Design for Assembly (DFA).
-- Examined casting geometry, component accessibility, standardized fasteners, and modular assembly.
-- Documented manufacturing and assembly considerations for the proposed machine.
+*Electrical panel layout documented in the project report.*
 
-## Engineering Tools and Topics
+The report contains electrical wiring and control documentation associated with the pneumatic sequence. **Siemens TIA Portal source files, PLC logic, and screenshots have not yet been recovered or independently verified.** They can be added to this section if the original project files are found.
 
-- SolidWorks
-- Electropneumatic circuit design
-- Pneumatic actuators
-- Capacitive proximity sensors
-- Electrical schematics
-- Sequential control
-- Design for Manufacturing (DFM)
-- Design for Assembly (DFA)
+## Engineering Topics
 
-## Project Documentation
+- 3D mechanical design and assembly using SolidWorks
+- Pneumatic cylinders and sequential electropneumatic control
+- Proximity sensing and end-position feedback
+- Electrical control and wiring schematics
+- Design for Manufacturing (DFM) and Design for Assembly (DFA)
 
-The repository includes:
+## Repository Contents
 
-- `report mecha.docx` — Full university project report, including CAD illustrations, component information, pneumatic sequence diagrams, and electrical schematics.
-- `dfa.pdf` — Additional manufacturing and assembly documentation.
-- `image whole assembly.jpg` — Final SolidWorks assembly screenshot.
+```text
+Automated-Can-Crusher-SolidWorks/
+├── README.md
+├── images/
+│   ├── solidworks-assembly.png
+│   ├── solidworks-exploded-view.png
+│   ├── fluidsim-simulation.png
+│   ├── electrical-control-schematic.png
+│   └── electrical-panel-layout.jpg
+└── [original project reports, if retained]
+```
 
-## Project Status
-
-This repository documents the mechanical and electropneumatic design work.
-
-The original editable SolidWorks assembly and part files are currently unavailable. The assembly screenshot and project report are retained as design evidence.
-
-Physical fabrication and operational testing are not verified by the available documentation.
+The `images/` files are extracted from the original academic report. This repository provides documentation and images, not the original editable CAD or simulation projects.
 
 ## Author
 
-**Ahmed Waseim Azzam**
-
-B.Sc. Mechatronics Engineering — German International University
-
+**Ahmed Waseim Azzam**  
+B.Sc. Mechatronics Engineering — German International University  
 M.Sc. Engineering Cybernetics — University of Stuttgart
-
-[GitHub Profile](https://github.com/AhmedWaseim)
