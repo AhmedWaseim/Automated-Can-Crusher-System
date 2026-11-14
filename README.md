@@ -41,8 +41,7 @@ The project includes a graphical control logic design using digital inputs, logi
 
 The diagram documents the control logic associated with the automated can-crushing sequence.
 
-![PLC Control Logic](images/plc-control-logic.png)
-
+![PLC Control Logic](plc-control-logic.png)
 *Function block control diagram showing input signals, logic operations, state memory, and output connections.*
 ![Electrical control schematic](images/electrical-control-schematic.png)
 
