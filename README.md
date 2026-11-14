@@ -35,7 +35,15 @@ The design uses **three pneumatic cylinders**. Two provide linear motion, while 
 `+` indicates extension and `−` indicates retraction. The project report includes a pneumatic step diagram and electropneumatic circuit views.
 
 ## 3. Electrical Control & PLC-Related Design
+### PLC Control Logic — Function Block Diagram
 
+The project includes a graphical control logic design using digital inputs, logic gates, RS memory elements, and digital outputs.
+
+The diagram documents the control logic associated with the automated can-crushing sequence.
+
+![PLC Control Logic](images/plc-control-logic.png)
+
+*Function block control diagram showing input signals, logic operations, state memory, and output connections.*
 ![Electrical control schematic](images/electrical-control-schematic.png)
 
 *Electrical control schematic from the original report; this is **not** presented as a TIA Portal screenshot.*
